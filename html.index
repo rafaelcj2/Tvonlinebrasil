@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TVOnlineBrasil - Sua TV Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0d0d0d 0%, #1c1c1c 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #00d563;
+    }
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #00d563;
+    }
+    header p {
+      font-size: 16px;
+      color: #aaa;
+    }
+    .banner {
+      background: url('https://images.unsplash.com/photo-1581092332063-52c7b2be76e0?fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .banner h2 {
+      position: relative;
+      font-size: 28px;
+      margin-bottom: 25px;
+      z-index: 1;
+    }
+    .banner a {
+      position: relative;
+      z-index: 1;
+      background: #00d563;
+      color: #000;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .banner a:hover {
+      background: #00b94e;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h3 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 40px;
+      color: #00d563;
+    }
+    .plano-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+    .plano {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .plano:hover {
+      transform: scale(1.05);
+    }
+    .plano h4 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .plano p {
+      font-size: 18px;
+      margin: 10px 0 20px;
+      color: #ccc;
+    }
+    .buttons-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .plano a.button {
+      display: inline-block;
+      background: #00d563;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .plano a.button:hover {
+      background: #00b94e;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #ddd;
+    }
+    .faq details {
+      background: #1f1f1f;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 6px;
+      color: #eee;
+    }
+    .faq summary {
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer {
+      background: #111;
+      color: #666;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .buttons-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TVOnlineBrasil</h1>
+    <p>A melhor experiência em TV por assinatura online</p>
+  </header>
+
+  <section class="banner">
+    <h2>Assista onde quiser: TV, Celular, Computador</h2>
+    <a href="https://wa.me/5551933002938">Teste Grátis no WhatsApp</a>
+  </section>
+
+  <section class="planos">
+    <h3>Planos Disponíveis</h3>
+    <div class="plano-grid">
+      <div class="plano">
+        <h4>Mensal</h4>
+        <p>R$ 29,90</p>
+        <div class="buttons-group">
+          <a class="button" href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=ficticio_mensal" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+          <a class="button" href="https://wa.me/5551933002938?text=Quero+assinar+o+plano+mensal">Assinar pelo WhatsApp</a>
+        </div>
+      </div>
+      <div class="plano">
+        <h4>Trimestral</h4>
+        <p>R$ 79,90</p>
+        <div class="buttons-group">
+          <a class="button" href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=ficticio_trimestral" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+          <a class="button" href="https://wa.me/5551933002938?text=Quero+assinar+o+plano+trimestral">Assinar pelo WhatsApp</a>
+        </div>
+      </div>
+      <div class="plano">
+        <h4>Semestral</h4>
+        <p>R$ 149,90</p>
+        <div class="buttons-group">
+          <a class="button" href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=ficticio_semestral" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+          <a class="button" href="https://wa.me/5551933002938?text=Quero+assinar+o+plano+semestral">Assinar pelo WhatsApp</a>
+        </div>
+      </div>
+      <div class="plano">
+        <h4>Anual</h4>
+        <p>R$ 249,90</p>
+        <div class="buttons-group">
+          <a class="button" href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=ficticio_anual" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
+          <a class="button" href="https://wa.me/5551933002938?text=Quero+assinar+o+plano+anual">Assinar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dispositivos">
+    <h3>Dispositivos Compatíveis</h3>
+    <ul>
+      <li>Smart TV (Samsung, LG, Android TV)</li>
+      <li>TV Box (MXQ, Amazon Fire, etc.)</li>
+      <li>Celular Android/iOS</li>
+      <li>Computadores e Notebooks</li>
+    </ul>
+  </section>
+
+  <section class="faq">
+    <h3>Dúvidas Frequentes</h3>
+    <details>
+      <summary>Posso assistir em mais de um aparelho?</summary>
+      <p>Sim, dependendo do plano contratado.</p>
+    </details>
+    <details>
+      <summary>Tem canais de futebol?</summary>
+      <p>Sim, com transmissão dos principais campeonatos.</p>
+    </details>
+    <details>
+      <summary>Tem conteúdo adulto?</summary>
+      <p>Sim, mas apenas para maiores de 18 anos.</p>
+    </details>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TVOnlineBrasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5551933002938" target="_blank" rel="noopener">📱</a>
+</body>
+</html>
